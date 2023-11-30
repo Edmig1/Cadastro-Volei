@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/Times.css">
+    <title>players</title>
+</head>
+<body>
+    <div class="div-titulo">
+        <h1 class="titulo">{{ Titulo }}</h1>
+        <a href="http://127.0.0.1:5000/cadastro">Cadastrar players</a>
+    </div>
+    <div class="divtotal">
+        {% for player in listatimes %}
+        <div class="card">
+            <div class="div-titulo">
+                <h2>{{ player.nome }}</h2>
+                <p>Ciade: #{{ player.jogo }}</p>
+            </div>
+            <div class="div-img" style="background-image: url('{{ player.img }}'); background-size: cover; background-repeat: no-repeat; background-position-y: 50%; background-position-x: 50%">
+
+            </div>
+            <div class="infos">
+                <p>Experiência: {{ player.rank }}</p>
+                <p>Posição: {{ player.posicao }}<p/>
+            </div>
+            <div class="div-btn">
+                <a class="excluir" href="excluir/{{ player.num }}"> <span class="excluir-span">Excluir</span> <span class="lixo"><i class="fa-solid fa-trash-can" style="color: #ffffff;"></i></span></a>
+                <a class="editar" href="editar/{{ player.num }}"> <span class="editar-span">Editar</span> <span class="caneta"><i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i></span></a>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+<script src="https://kit.fontawesome.com/7f62cd2861.js" crossorigin="anonymous"></script>
+</body>
+</html>

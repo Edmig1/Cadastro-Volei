@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nova Square', sans-serif;
+}
+body{
+    min-height: 100vh;
+    background-image: url('volei.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.div-titulo{
+    display: flex;
+    height: 10vh;
+    justify-content: space-around;
+        align-items: center;
+}
+.div-titulo h1{
+    font-size: 3em;
+    color: #dabb20;
+}
+.div-titulo a{
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    background: #dabb20;
+    text-decoration: none;
+    padding: 10px;
+}
+.card-login{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+fieldset{
+    height: 60vh;
+    width: 30vw;
+    background: rgba(255, 255, 255, 0.19);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 20px;;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.form-control{
+    padding: 8px;
+    border: none;
+    border-radius:20px;
+    color: white;
+    outline: none;
+    background: rgba(0, 0, 0, 0.6);
+    width: 80%;
+}
+.form-control::placeholder{
+    color: white;
+}
+.btn-salvar{
+    border: none;
+    border-radius: 20px;
+}
+.lixo{
+    position: relative;
+    transition: 0.5s ease-in-out;
+    right: 0%;
+}
+.btn-salvar{
+    position: relative;
+    transition: 1s ease-in-out;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+    background-color: #dabb20;
+    padding: 10px;
+}
+.btn-salvar:hover{
+    .excluir-span{
+        transition: 0.2s ease-in-out;
+        opacity: 0%;
+    }
+    .lixo{
+        transition: 0.5s ease-in-out;
+        right: 40%;
+    }
+}
